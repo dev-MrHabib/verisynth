@@ -1,0 +1,17 @@
+.dashboardcontainer {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  height: 100%;
+}
+.maindashboard {
+  flex-basis: 80%;
+  overflow-x: auto;
+}
+@media (max-width: 580px) {
+  .dashboardcontainer {
+    display: flex;
+    flex-direction: column;
+  }
+}

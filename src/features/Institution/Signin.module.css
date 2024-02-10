@@ -1,0 +1,92 @@
+.formcontainer {
+  display: flex;
+  gap: 10px;
+  margin: 2rem;
+  flex-direction: column;
+}
+.formcontainer label {
+  font-size: 1.4rem;
+  width: 20%;
+}
+.formcontainer input {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.formcontainer input:focus {
+  outline: none;
+}
+.signinform {
+  width: 40%;
+  background-color: white;
+  padding: 2rem 1rem;
+  margin: 3rem auto;
+  border-radius: 7px;
+}
+.signinform p {
+  text-align: center;
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+.signinform p button {
+  text-align: center;
+  margin: 1rem;
+  font-size: 0.2rem;
+}
+.signinform p button {
+  background-color: transparent;
+  color: blue;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.signupbtn {
+  font-size: 9rem;
+}
+.signinbtn {
+  text-align: center;
+  margin: 0 3rem;
+  padding: 0.6rem 0.1rem;
+  font-size: 1.3rem;
+  background-color: #f15d0a;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  width: 80%;
+}
+.signinbtn:hover {
+  background-color: #bb5e28;
+  color: white;
+}
+
+@media (max-width: 580px) {
+  .formcontainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .formcontainer label {
+    width: 100%;
+  }
+  .formcontainer input {
+    width: 100%;
+  }
+  .signinbtn {
+    text-align: center;
+    margin: 0.2rem 2rem;
+    padding: 0.3rem 1rem;
+    font-size: 1.3rem;
+  }
+  .signinform {
+    margin-top: 8rem;
+    width: 80%;
+  }
+  .signupbtn {
+    font-size: 9px;
+  }
+}

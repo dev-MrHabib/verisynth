@@ -1,0 +1,12 @@
+body {
+  background-color: white;
+}
+.applayout {
+  padding-bottom: 2rem;
+  height: 100%;
+  background-color: white;
+  margin: -2;
+}
+.applayout::-webkit-scrollbar {
+  display: none;
+}

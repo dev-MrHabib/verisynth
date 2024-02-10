@@ -1,0 +1,84 @@
+body {
+  background-color: white;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 900px;
+  margin: 0rem auto;
+  padding: 6rem 0;
+  background-color: white;
+}
+header {
+  margin: 2rem 0;
+  text-align: center;
+}
+header h2 {
+  font: bold;
+  font-size: 2.5rem;
+  font-family: sans-serif;
+  margin-bottom: 1rem;
+}
+header p {
+  font-size: 1.8rem;
+  font: 700;
+  font-family: sans-serif;
+  margin-bottom: 1rem;
+}
+
+.verificationform {
+  display: flex;
+  gap: 5px;
+  background-color: rgb(212, 182, 136);
+  padding: 5rem 4rem;
+  justify-content: center;
+  border-radius: 10px;
+}
+.verificationform input {
+  padding: 1rem 0.5rem;
+  width: 80%;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 5px;
+}
+.verificationform input:focus {
+  outline: none;
+}
+.verificationform button {
+  padding: 1.2rem 2rem;
+  background-color: #f15d0a;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  color: white;
+  font: bold;
+  cursor: pointer;
+  transition: 0.5s ease-in-out all;
+}
+.verificationform button:hover {
+  background-color: #bb5e28;
+  color: blue;
+}
+@media (max-width: 768px) {
+  .verificationform {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .verificationform input {
+    width: 100%;
+  }
+  .verificationform input:focus {
+    outline: none;
+  }
+  .verificationform button {
+    width: 100%;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0rem auto;
+    padding: 3rem 1rem;
+  }
+}
