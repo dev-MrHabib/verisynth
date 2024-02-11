@@ -1,0 +1,105 @@
+.footer {
+  display: flex;
+  padding: 0.5rem 0rem;
+  width: 100%;
+  background-color: #a2a9b0;
+}
+.image {
+  width: 30%;
+  background-color: transparent;
+  object-fit: cover;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+.imagecontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.copyright {
+  flex-basis: 33.3%;
+  padding: 0rem 1rem;
+}
+.copyright p {
+  line-height: 1.3;
+  margin: 0.5rem 0;
+}
+.access {
+  flex-basis: 33.3%;
+  padding: 0.6rem 1.5rem;
+  line-height: 0.5;
+  margin-top: 3rem;
+}
+.access h5 {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+.accessInfo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 1rem 0;
+}
+.socialmedia {
+  flex-basis: 33.3%;
+  padding: o.5rem 0.5rem;
+  margin-top: 2.2rem;
+  font-size: 2rem;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  cursor: pointer;
+}
+.newsletter {
+  flex-basis: 33.3%;
+  padding: o.5rem 0.5rem;
+  margin-top: 2.2rem;
+}
+.newsletter h5 {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+.newsletter label {
+  font-size: 1rem;
+}
+.newsletter input {
+  margin: 0.5rem 0;
+  padding: 13px 10px;
+  border: 2px solid black;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1.2rem;
+}
+.newsletter button {
+  display: inline-block;
+  padding: 9px 28px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  margin: 0.5rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+    font-size: 1.4rem;
+  }
+  .copyright p {
+    line-height: 1.3;
+  }
+  .access {
+    flex-basis: 33.3%;
+    padding: 0.2rem 1rem;
+    line-height: 1;
+    margin-top: 1rem;
+  }
+  .newsletter h5 {
+    font-size: 1.4rem;
+    margin: 0.3rem 0;
+  }
+}

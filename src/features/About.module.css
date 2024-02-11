@@ -1,0 +1,29 @@
+.aboutcontainer {
+  /* text-align: center; */
+  padding: 2.5rem 3.8rem;
+}
+.aboutcontainer h3 {
+  margin: 2rem 0;
+  font-size: 1.9rem;
+  text-align: center;
+}
+.aboutcontainer p {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+@media (max-width: 768px) {
+  .aboutcontainer {
+    padding: 2.5rem 0.5rem;
+  }
+  .aboutcontainer h3 {
+    margin: 2rem 0;
+    font-size: 1.9rem;
+    text-align: center;
+  }
+  .aboutcontainer p {
+    font-size: 1.1rem;
+    text-align: justify;
+    word-spacing: 1px;
+    margin: 1rem 0;
+  }
+}

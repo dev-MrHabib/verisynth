@@ -1,0 +1,140 @@
+:global(.active) {
+  text-decoration: underline;
+}
+.logo {
+  width: 130px;
+  object-fit: cover;
+  height: 130px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a2a9b0;
+  padding: 0.3rem 1rem;
+  text-decoration: none;
+  width: 100%;
+}
+.header h2 a {
+  font-size: 2.6rem;
+  text-decoration: none;
+  font-style: italic;
+}
+.header h2 a:active {
+  color: black;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+nav ul li a:hover {
+  color: rgb(209, 195, 195);
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 2.25rem;
+  position: absolute;
+  top: 1.75rem;
+  right: 0.5rem;
+  justify-content: space-between;
+  height: 2rem;
+  cursor: pointer;
+}
+.menu span {
+  background-color: black;
+  display: none;
+  height: 0.4rem;
+  width: 100%;
+}
+.login {
+  position: relative;
+  height: 100%;
+}
+.hidelogin {
+  display: block;
+}
+.loginOption {
+  position: absolute;
+  top: 90px;
+  right: 100px;
+  border-radius: 10px;
+  background-color: #f15d0a;
+  cursor: pointer;
+}
+.loginOption li {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+}
+.loginOption a {
+  text-decoration: none;
+}
+@media (max-width: 580px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    width: 2.25rem;
+    position: absolute;
+    top: 1.75rem;
+    right: 1.6rem;
+    justify-content: space-between;
+    height: 2rem;
+    cursor: pointer;
+  }
+  .menu span {
+    display: flex;
+  }
+  .header {
+    flex-direction: column;
+    align-items: start;
+  }
+  nav {
+    width: 100%;
+  }
+  .header nav ul {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.25rem;
+  }
+  .header nav ul.show {
+    display: none;
+  }
+
+  nav ul li {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+  }
+  nav ul li a {
+    text-align: center;
+  }
+  .logo {
+    width: 100px;
+    object-fit: cover;
+    height: 100px;
+  }
+  .loginOption {
+    position: absolute;
+    top: 275px;
+  }
+  .loginOption li {
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+  }
+}
