@@ -1,7 +1,6 @@
 //import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import styles from "./Signup.module.css";
-
 //import { useState } from "react";
 //import toast from "react-hot-toast";
 //import { createLogger } from "vite";
