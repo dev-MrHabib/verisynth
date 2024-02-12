@@ -1,6 +1,8 @@
+import CredentialItems from "./CredentialItems";
 import styles from "./credentials.module.css";
 
 function Credential() {
+  // function credentialList() {}
   return (
     <div className={styles.credentialsbody}>
       <div className={styles.credentialscontainer}>
@@ -12,8 +14,9 @@ function Credential() {
           <div>degree type</div>
           <div>awarded date</div>
           <div>Certificate image</div>
-          <div>Delete</div>
+          <div style={{ opacity: "0" }}>Certificate image</div>
         </header>
+        <CredentialItems />
       </div>
     </div>
   );

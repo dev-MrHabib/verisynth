@@ -1,7 +1,7 @@
 .formcontainer {
   display: flex;
   gap: 10px;
-  margin: 2rem;
+  margin: 1rem 2rem;
   flex-direction: column;
 }
 .formcontainer label {
@@ -9,7 +9,7 @@
   width: 20%;
 }
 .formcontainer input {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   outline: none;
@@ -25,7 +25,7 @@
   width: 40%;
   background-color: white;
   padding: 2rem 1rem;
-  margin: 3rem auto;
+  margin: 0rem auto;
   border-radius: 7px;
 }
 .signinform p {
@@ -69,6 +69,7 @@
   .formcontainer {
     display: flex;
     flex-direction: column;
+    margin: 1;
   }
   .formcontainer label {
     width: 100%;
@@ -78,12 +79,12 @@
   }
   .signinbtn {
     text-align: center;
-    margin: 0.2rem 2rem;
-    padding: 0.3rem 1rem;
+    margin: 0.2rem 1.6rem;
+    padding: 0.3rem 0.5rem;
     font-size: 1.3rem;
   }
   .signinform {
-    margin-top: 8rem;
+    margin-top: 0rem;
     width: 80%;
   }
   .signupbtn {

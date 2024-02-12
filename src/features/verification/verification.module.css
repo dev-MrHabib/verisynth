@@ -9,7 +9,7 @@ body {
 .container {
   max-width: 900px;
   margin: 0rem auto;
-  padding: 6rem 0;
+  padding: 3rem 0;
   background-color: white;
 }
 header {
@@ -40,7 +40,7 @@ header p {
 .verificationform input {
   padding: 1rem 0.5rem;
   width: 80%;
-  font-size: 1rem;
+  font-size: 1.3rem;
   outline: none;
   border-radius: 5px;
 }

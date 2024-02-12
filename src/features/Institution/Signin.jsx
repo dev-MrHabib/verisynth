@@ -1,24 +1,66 @@
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import styles from "./Signin.module.css";
+import toast from "react-hot-toast";
+
+const issuerid = JSON.parse(localStorage.getItem("issuerid"));
+console.log(issuerid);
+export async function credentialList(issuerid) {
+  const res = await fetch(
+    `https://verisynth.onrender.com/api/v1/institution/get-all-my-credentials?${issuerid}`
+  );
+  const data = await res.json();
+  console.log(data);
+  console.log("hi");
+}
 
 function Signin() {
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
+  const payload = {
+    email: "olareign98@gmail.com",
+    password: "P@ssW0rd",
+  };
 
-  const { register, handleSubmit, formState } = useForm();
+  const { register, handleSubmit, formState, reset } = useForm();
   const { errors } = formState;
   function onSignin(data) {
     console.log(data);
-  }
-  function onerrors(errors) {
-    console.log(errors);
+    async function getSignin(data) {
+      const res = await fetch(
+        "https://verisynth.onrender.com/api/v1/institution/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+      data = await res.json();
+      console.log(payload);
+      if (data.message !== "Istitution account created SuccessFully") {
+        toast.error(data.message);
+        return;
+      }
+
+      toast.success("Successfully login");
+      reset();
+      navigate("/dashboard/profile");
+      console.log(data);
+      // console.log(data.data.data._id);
+      localStorage.setItem("issuerid", JSON.stringify(data.data.data._id));
+      localStorage.setItem("token", JSON.stringify(data.data.token));
+      console.log(data.token);
+      const token = JSON.parse(localStorage.getItem("token"));
+      console.log(token);
+      console.log(localStorage);
+      localStorage.setItem("user", JSON.stringify(data));
+    }
+    getSignin(data);
   }
 
   return (
-    <form
-      className={styles.signinform}
-      onSubmit={handleSubmit(onSignin, onerrors)}
-    >
+    <form className={styles.signinform} onSubmit={handleSubmit(onSignin)}>
       <div className={styles.formcontainer}>
         <label htmlFor="email">Email</label>
         <input

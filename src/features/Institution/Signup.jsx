@@ -1,19 +1,17 @@
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import styles from "./Signup.module.css";
-//import { useState } from "react";
-//import toast from "react-hot-toast";
-//import { createLogger } from "vite";
-function Signup() {
-  //const navigate = useNavigate();
+import toast from "react-hot-toast";
 
-  const { register, handleSubmit, getValues, formState } = useForm();
+function Signup() {
+  const navigate = useNavigate();
+
+  const { register, handleSubmit, getValues, formState, reset } = useForm();
 
   const { errors } = formState;
 
   function onSignup(data) {
-    // console.log(data);
-    // navigate("/dashboard/profile");
+    console.log(data);
     async function getSignup(data) {
       const res = await fetch(
         "https://verisynth.onrender.com/api/v1/institution/register",
@@ -25,9 +23,16 @@ function Signup() {
           body: JSON.stringify(data),
         }
       );
+
       data = await res.json();
       console.log(data);
-      // navigate("/dashboard/profile");
+      if (data.message !== "Istitution account created SuccessFully") {
+        toast.error(data.message);
+        return;
+      }
+      toast.success(data.message);
+      reset();
+      navigate("/dashboard/profile");
     }
     getSignup(data);
   }
@@ -35,14 +40,14 @@ function Signup() {
     <form className={styles.signupform} onSubmit={handleSubmit(onSignup)}>
       <h3>Institution Sign up</h3>
       <div className={styles.formsignupcontainer}>
-        <label htmlFor="institution">Institution </label>
+        <label htmlFor="institution_name">Institution </label>
         <input
-          id="institution"
-          {...register("institution", {
+          id="institution_name"
+          {...register("institution_name", {
             required: "institution name is required",
           })}
         />
-        {errors?.institution?.message && (
+        {errors?.institution_name?.message && (
           <p style={{ color: "red", fontSize: "1.2rem" }}>
             {errors.institution.message}
           </p>
@@ -76,10 +81,10 @@ function Signup() {
         )}
       </div>
       <div className={styles.formsignupcontainer}>
-        <label htmlFor="confirmpassword">confirm Password</label>
+        <label htmlFor="confirmPassword">confirm Password</label>
         <input
-          id="confirmpassword"
-          {...register("confirmpassword", {
+          id="confirmPassword"
+          {...register("confirmPassword", {
             validate: (value) =>
               value === getValues().password ||
               "confirm password must be the same with password",
