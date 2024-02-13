@@ -19,50 +19,30 @@ function Header() {
         </div>
         <nav onClick={() => setIsopen(false)}>
           <ul className={open ? styles.show : ""}>
-            {localStorage.getItem("user") ? (
-              <>
-                <li>
-                  <NavLink to="/verification">Verification</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/">pricing</NavLink>
-                </li>
-
-                <li>
-                  <NavLink to="/about">About Us</NavLink>
-                </li>
-              </>
-            ) : (
-              <>
-                <li>
-                  <NavLink to="/verification">Verification</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/">pricing</NavLink>
-                </li>
-                <>
-                  <div>
-                    <li className={styles.login}>
-                      <NavLink
-                        to="/"
-                        onMouseEnter={() => {
-                          setIsopenLogin(true);
-                        }}
-                        onMouseLeave={() => {
-                          setIsopenLogin(false);
-                        }}
-                      >
-                        Login
-                      </NavLink>
-                    </li>
-                  </div>
-                </>
-
-                <li>
-                  <NavLink to="/about">About Us</NavLink>
-                </li>
-              </>
-            )}
+            <li>
+              <NavLink to="/verification">Verification</NavLink>
+            </li>
+            <li>
+              <NavLink to="/">pricing</NavLink>
+            </li>
+            <li className={styles.login}>
+              <NavLink
+                to="/"
+                onMouseEnter={() => {
+                  setIsopenLogin(true);
+                }}
+                onMouseLeave={() => {
+                  setIsopenLogin(false);
+                }}
+              >
+                Login
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">About Us</NavLink>
+            </li>
+            <div></div>
+            {localStorage.getItem("user") ? <></> : <></>}
           </ul>
         </nav>
         {openLogin && (
