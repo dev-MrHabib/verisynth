@@ -1,5 +1,5 @@
 import CredentialItems from "./CredentialItems";
-import styles from "./credentials.module.css";
+import styles from "./Credentials.module.css";
 
 function Credential() {
   // function credentialList() {}
